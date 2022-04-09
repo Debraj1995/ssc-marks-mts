@@ -1,4 +1,4 @@
-let urlSheet = 'index.html';
+let urlSheet = 'https://ssc.digialm.com//per/g27/pub/2207/touchstone/AssessmentQPHTMLMode1//2207O21143/2207O21143S64D180589/16467231121836295/4415018714_2207O21143S64D180589E1.html';
 
 getHTML()
 function getHTML(){
@@ -75,12 +75,22 @@ function getHTML(){
      }
      mark =right - (wrong*0.25) 
      console.log("Raw marks: "+ mark + "\nRight: "+(100-(wrong+ignore)) + "\nWrong: "+wrong +"\nNot answered: "+ignore)
-     const scores = document.getElementsByClassName("score")
+     
     //  console.log(scores)
+    if(mark!=0)
+     putData(  mark,right,wrong,ignore)
+     else
+     putData('Unknown','Unknown','Unknown','Unknown')
+    }
+
+    function putData(mark,right,wrong,ignore)
+    {
+    var scores = document.getElementsByClassName("score")
     var arrData = Array.from(scores)
-    arrData[0].innerText = mark
+    console.log(scores);
+    console.log(arrData);
+    scores[0].innerText = mark
     arrData[1].innerText = right
     arrData[2].innerText = wrong
     arrData[3].innerText=ignore
     }
-

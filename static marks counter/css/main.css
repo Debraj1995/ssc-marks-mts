@@ -7,60 +7,140 @@
 }
 body
 {
-    background-color: #333;
+    /* background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% ); */
+    background-color:  #5e5e5e ;
     height: 100vh;
-    margin: 2rem 2rem;
+    margin: 2rem 0 2rem 0;
     overflow: hidden;
+}
+.submit{
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto  auto;
+    
+}
+.btn
+{   position: relative;
+    height: 3rem;
+    width: minmax(auto,8rem);
+    font-weight: 700;
+    font-size: 1.5rem;
+    background-color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    padding: .5rem 0;
+    cursor: pointer;
+    transition: ease-in-out;
+    box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+        
+}
+.btn:hover
+{
+    background-color: #5fe49d;
+}
+
+#sub{
+    width: 80%;
+    margin-left: 5rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: black;
+    background-color: #515151;
+    border-radius: 1rem;
+    border: none;
+    alt: "submit";
+    box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
 }
 h1{
     margin-bottom: 25px;
+    font-weight: 700;
+    width: 10rem;
+    padding-left: 2rem;
+    margin-top: 0;
+    font-size: 1rem;
+    color: #333;
+    background: -webkit-linear-gradient(#fee140, #fa709a );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+      
     
+}
+#n1
+{
+    background: -webkit-linear-gradient( #4facfe , #00f2fe );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#n2
+{
+    background: -webkit-linear-gradient( #ddd964, #5fe49d   );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#n3
+{
+    background: -webkit-linear-gradient(  #FFE53B , #FF2525 );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#n4
+{
+    background: -webkit-linear-gradient( #21D4FD , #B721FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .heading{
     position: relative;
     font-size: 2rem;
-    top: 20px;
-    left: 20px;
     color: #333;
+    font-weight: 500;
 }
-body .container{
-    height: inherit;
-    width: inherit;
-    display: flex;
-    justify-content: space-evenly;
+.container{
+    margin: .5rem;
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns:  20rem 20rem ;
+    grid-template-rows: auto auto;
+    /* grid-auto-columns: minmax(4,auto); */
+    grid-gap: 4rem;
 }
 .card{
-    position: static;
+    padding: 2rem 0 0 1rem ;
     font-size: 2rem;
     font-weight: 700;
-    width: calc(100vw/5);
-    height: 250px;
-    border-radius: 2rem;
+    width: minmax(auto,20rem);
+    height: 200px;
+    border-radius: 1rem;
     z-index: 10;
+    box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
     /* background-color:  #900C3F ; */
 }
-.card::after{
-    content: "";
-    z-index: -2;
-    display: inline-block;
-    position: relative;
-    height: 248px;
-    width: 100%;
-    border-radius: 2rem;
-    top: -36px;
-    left: 0;
-    background-color: #555;
-}
-
-#s1{
-    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
-}
-#s2{
-    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
-}
-#s3{
-    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-}
-#s4{
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+.score{
+    padding: 1rem 0 0 0 ;
+    font-size: 5rem;
+    font-weight: 700;
+    color: #333;
 }
